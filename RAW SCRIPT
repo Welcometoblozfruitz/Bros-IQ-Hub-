@@ -1,0 +1,1307 @@
+OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/WRUyYTdY')))()
+
+local Window = OrionLib:MakeWindow({
+    Name = "Bros IQ Hub",
+    HidePremium = false,
+    SaveConfig = true,
+    ConfigFolder = "Name"
+})
+local HomeTab = Window:MakeTab({ Name = "🏠-Home", Icon = "rbxassetid://4483345998", PremiumOnly = false })
+
+-- Add red "Player Info" section at the top
+HomeTab:AddSection({
+    Name = "<font size='18' color='rgb(255,0,0)'> Player Info </font>"
+})
+
+local executorName = "Unknown"
+if getexecutorname then
+    executorName = getexecutorname()
+end
+
+local player = game.Players.LocalPlayer
+local gameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+local playersInServer = #game.Players:GetPlayers()
+
+-- Add labels with red text for the labels and default color for the values
+HomeTab:AddLabel("<font color='rgb(255,0,0)'>Executor: </font>" .. executorName)
+HomeTab:AddLabel("<font color='rgb(255,0,0)'>Username: </font>" .. player.Name)
+HomeTab:AddLabel("<font color='rgb(255,0,0)'>Display: </font>" .. player.DisplayName)
+HomeTab:AddLabel("<font color='rgb(255,0,0)'>User ID: </font>" .. player.UserId)
+HomeTab:AddLabel("<font color='rgb(255,0,0)'>Account Age: </font>" .. player.AccountAge .. " days")
+HomeTab:AddLabel("<font color='rgb(255,0,0)'>Game name: </font>" .. gameName)
+HomeTab:AddLabel("<font color='rgb(255,0,0)'>Game ID: </font>" .. game.PlaceId)
+HomeTab:AddLabel("<font color='rgb(255,0,0)'>Players In Server: </font>" .. playersInServer)
+
+local localPlayer = game.Players.LocalPlayer
+
+local AvatarTab = Window:MakeTab({
+    Name = "🗿-Avatar",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+-- Avatar Copier GUI (Top Section)
+AvatarTab:AddSection({
+    Name = "<font size='18' color='rgb(255,0,0)'> Avatar Copier GUI </font>"
+})
+
+AvatarTab:AddButton({
+    Name = "Avatar Copier GUI By Bros IQ",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/ZE7JURna"))()
+    end
+})
+
+-- Avatar Changer Section
+AvatarTab:AddSection({
+    Name = "<font size='18' color='rgb(255,0,0)'> Avatar Changer </font>"
+})
+
+-- Headless Horseman (Fixed)
+AvatarTab:AddButton({
+    Name = "Headless Horseman",
+    Callback = function()
+        local args = {
+            [1] = "CharacterChange",
+            [2] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1, [5] = 1, [6] = 134082579},
+            [3] = "Roblox20"
+        }
+        game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+        wait(0.1)
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "Headless Horseman",
+            Text = "Wait Please 1-10 Seconds",
+            Duration = 5
+        })
+    end
+})
+
+-- Korblox DeathWalker
+AvatarTab:AddButton({
+    Name = "Korblox DeathWalker (🔥)",
+    Callback = function()
+        local args = {
+            [1] = "CharacterChange",
+            [2] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1, [5] = 1, [6] = 16580493236},
+            [3] = "Roblox20"
+        }
+        game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+    end
+})
+
+-- Classic Head Section
+AvatarTab:AddSection({
+    Name = "<font size='18' color='rgb(255,0,0)'> Classic Head </font>"
+})
+
+local heads = {
+    {Name = "Cheeks Head", ID = 746767604},
+    {Name = "Strong Jaw", ID = 616399508},
+    {Name = "Narrow Head", ID = 746774687},
+    {Name = "Chiseled Head", ID = 616387160},
+    {Name = "Paragon Head", ID = 616398268}
+}
+
+for _, head in ipairs(heads) do
+    AvatarTab:AddButton({
+        Name = head.Name,
+        Callback = function()
+            local args = {
+                [1] = "CharacterChange",
+                [2] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1, [5] = 1, [6] = head.ID},
+                [3] = "Roblox20"
+            }
+            game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+        end
+    })
+end
+
+-- Korblox Leg Section
+AvatarTab:AddSection({
+    Name = "<font size='18' color='rgb(255,0,0)'> Korblox Leg </font>"
+})
+
+AvatarTab:AddButton({
+    Name = "Right Leg Korblox",
+    Callback = function()
+        local args = {
+            [1] = "CharacterChange",
+            [2] = {[1] = 1, [2] = 1, [3] = 1, [4] = 139607718, [5] = 1, [6] = 1},
+            [3] = "Roblox20"
+        }
+        game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+    end
+})
+
+AvatarTab:AddButton({
+    Name = "Left Leg Korblox",
+    Callback = function()
+        local args = {
+            [1] = "CharacterChange",
+            [2] = {[1] = 1, [2] = 1, [3] = 1, [4] = 1, [5] = 139607673, [6] = 1},
+            [3] = "Roblox20"
+        }
+        game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+    end
+})
+
+-- Bundles Section (Moved to Avatar Tab)
+AvatarTab:AddSection({
+    Name = "<font size='18' color='rgb(255,0,0)'> Bundles </font>"
+})
+
+local bundles = {
+    {Name = "Inf15 Thin", Desc = "(Boy) U Need Body Avatar", IDs = {17873152058, 17873151683, 17873151726, 17873151827, 17873152017, 1}},
+    {Name = "Blush Fashion Doll (Black Torso)", Desc = "(Girl) Woman Arm/No Leg", IDs = {96491916349570, 86499698, 86499716, 1, 1, 1}},
+    {Name = "Mini Plushie (Gray Torso)", Desc = "(Boy, Girl) U Need Small Body Ava", IDs = {18865136555, 14579959062, 14579959191, 14579959249, 14579963667, 1}}
+}
+
+for _, bundle in ipairs(bundles) do
+    AvatarTab:AddButton({
+        Name = bundle.Name,
+        Callback = function()
+            local args = {
+                [1] = "CharacterChange",
+                [2] = bundle.IDs,
+                [3] = "Roblox20"
+            }
+            game:GetService("ReplicatedStorage").RE:FindFirstChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+        end
+    })
+end
+
+OrionLib:Init()
+local localPlayer = game.Players.LocalPlayer
+
+local Tab = Window:MakeTab({ Name = "👥-For People", Icon = "rbxassetid://4483345998", PremiumOnly = false })
+
+-- Add Section: Player's
+Tab:AddSection({ Name = "<font size='18' color='rgb(255,0,0)'>Player's</font>" })
+
+-- Dropdown for Selecting a Target Player
+local playerDropdown
+local targetPlayer
+
+playerDropdown = Tab:AddDropdown({ 
+    Name = "Select Target Player", 
+    Options = {}, 
+    Callback = function(selectedPlayer) 
+        targetPlayer = game.Players:FindFirstChild(selectedPlayer)
+        updateLabels()
+    end
+})
+
+-- Add Section: Target Player Info
+Tab:AddSection({ Name = "<font size='18' color='rgb(255,0,0)'>Target Player Info</font>" })
+
+-- Labels for Player Info
+local PlayerNameLabel = Tab:AddLabel("Username: N/A")
+local DisplayNameLabel = Tab:AddLabel("Display: N/A")
+local UserIdLabel = Tab:AddLabel("User ID: N/A")
+local AccountAgeLabel = Tab:AddLabel("Account Age: N/A")
+local HealthLabel = Tab:AddLabel("Health: N/A")
+
+-- Add Section: For Target Player
+Tab:AddSection({ Name = "<font size='18' color='rgb(255,0,0)'>For Target Player</font>" })
+
+-- Function to Update Labels
+local function updateLabels()
+    if targetPlayer then
+        PlayerNameLabel:Set("Username: " .. targetPlayer.Name)
+        DisplayNameLabel:Set("Display: " .. targetPlayer.DisplayName)
+        UserIdLabel:Set("User ID: " .. targetPlayer.UserId)
+        AccountAgeLabel:Set("Account Age: " .. targetPlayer.AccountAge .. " days")
+
+        local character = targetPlayer.Character
+        if character and character:FindFirstChild("Humanoid") then
+            HealthLabel:Set("Health: " .. math.floor(character.Humanoid.Health))
+        else
+            HealthLabel:Set("Health: N/A")
+        end
+    end
+end
+
+-- Button: Teleport to Target Player
+Tab:AddButton({ 
+    Name = "Teleport", 
+    Callback = function() 
+        if targetPlayer and targetPlayer.Character and targetPlayer.Character.PrimaryPart then
+            localPlayer.Character:SetPrimaryPartCFrame(targetPlayer.Character.PrimaryPart.CFrame)
+            OrionLib:MakeNotification({
+                Name = "Teleporting", 
+                Content = "You have been teleported to " .. targetPlayer.DisplayName, 
+                Image = "rbxassetid://4483345998", 
+                Time = 5
+            })
+        end
+    end
+})
+
+-- Toggle: View (Camera Lock)
+local ViewEnabled = false
+
+local function toggleView(state)
+    ViewEnabled = state
+    if state and targetPlayer then
+        task.spawn(function()
+            while ViewEnabled and targetPlayer and targetPlayer.Character and targetPlayer.Character.PrimaryPart do
+                game.Workspace.CurrentCamera.CameraSubject = targetPlayer.Character.PrimaryPart
+                task.wait(0.1)
+            end
+        end)
+    else
+        game.Workspace.CurrentCamera.CameraSubject = localPlayer.Character:FindFirstChild("Humanoid")
+    end
+end
+
+Tab:AddToggle({
+    Name = "View", 
+    Default = false, 
+    Callback = function(state) 
+        toggleView(state) 
+        OrionLib:MakeNotification({
+            Name = "View Toggled", 
+            Content = state and "Now viewing target player" or "View disabled", 
+            Image = "rbxassetid://4483345998", 
+            Time = 5
+        }) 
+    end
+})
+
+-- ESP System
+local ESPEnabled = false
+
+local function createESP(player)
+    if not player.Character then return end
+
+    local billboard = Instance.new("BillboardGui")
+    billboard.Name = "ESP"
+    billboard.AlwaysOnTop = true
+    billboard.Size = UDim2.new(0, 200, 0, 50)
+    billboard.Adornee = player.Character:FindFirstChild("HumanoidRootPart")
+
+    local nameLabel = Instance.new("TextLabel", billboard)
+    nameLabel.Size = UDim2.new(1, 0, 0.33, 0)
+    nameLabel.TextColor3 = Color3.fromRGB(255, 0, 0)  -- Red (Name)
+    nameLabel.BackgroundTransparency = 1
+    nameLabel.TextScaled = true
+    nameLabel.Text = "Name: N/A"
+
+    local healthLabel = Instance.new("TextLabel", billboard)
+    healthLabel.Position = UDim2.new(0, 0, 0.33, 0)
+    healthLabel.Size = UDim2.new(1, 0, 0.33, 0)
+    healthLabel.TextColor3 = Color3.fromRGB(0, 255, 0)  -- Green (Health)
+    healthLabel.BackgroundTransparency = 1
+    healthLabel.TextScaled = true
+    healthLabel.Text = "Health: N/A"
+
+    local distanceLabel = Instance.new("TextLabel", billboard)
+    distanceLabel.Position = UDim2.new(0, 0, 0.66, 0)
+    distanceLabel.Size = UDim2.new(1, 0, 0.33, 0)
+    distanceLabel.TextColor3 = Color3.fromRGB(255, 255, 255)  -- White (Distance)
+    distanceLabel.BackgroundTransparency = 1
+    distanceLabel.TextScaled = true
+    distanceLabel.Text = "Distance: N/A"
+
+    billboard.Parent = player.Character:FindFirstChild("HumanoidRootPart")
+
+    task.spawn(function()
+        while ESPEnabled and player and player.Character and localPlayer.Character do
+            local humanoid = player.Character:FindFirstChild("Humanoid")
+            local hrp = player.Character:FindFirstChild("HumanoidRootPart")
+            local localHRP = localPlayer.Character:FindFirstChild("HumanoidRootPart")
+
+            if humanoid and hrp and localHRP then
+                local distance = math.floor((hrp.Position - localHRP.Position).magnitude)
+                nameLabel.Text = "Name: " .. player.Name
+                healthLabel.Text = "Health: " .. math.floor(humanoid.Health)
+                distanceLabel.Text = "Distance: " .. distance .. "m"
+            end
+            task.wait(0.1)
+        end
+        billboard:Destroy()
+    end)
+end
+
+Tab:AddToggle({
+    Name = "ESP", 
+    Default = false, 
+    Callback = function(state)
+        ESPEnabled = state
+        if ESPEnabled and targetPlayer then
+            createESP(targetPlayer)
+        end
+    end
+})
+
+-- Function to update dropdown list dynamically
+local function updateDropdown()
+    local playerNames = {}
+    for _, player in pairs(game.Players:GetPlayers()) do
+        table.insert(playerNames, player.Name)
+    end
+    playerDropdown:Refresh(playerNames)
+end
+
+-- Continuous Health & ESP Update Loop
+task.spawn(function()
+    while true do
+        updateLabels()
+        task.wait(0.1)  -- Update every 0.1 seconds
+    end
+end)
+
+-- Update dropdown when players join/leave
+game.Players.PlayerAdded:Connect(updateDropdown)
+game.Players.PlayerRemoving:Connect(updateDropdown)
+
+updateDropdown()
+-- Add Section for Get Sofa Teleport
+Tab:AddSection({
+    Name = "<font size='18' color='rgb(255,0,0)'>Get Sofa</font>"
+})
+
+-- Button for Teleporting to Sofa
+Tab:AddButton({
+    Name = "Get Sofa",
+    Callback = function()
+        local player = game.Players.LocalPlayer
+        if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+            -- Teleport to first position
+            player.Character.HumanoidRootPart.CFrame = CFrame.new(-86, 20, -130)
+            wait(0.5)  -- Small delay before next teleport
+            -- Teleport to second position
+            player.Character.HumanoidRootPart.CFrame = CFrame.new(-83, 20, -130)
+
+            -- Make a notification for the teleport
+            OrionLib:MakeNotification({
+                Name = "Sofa Teleport",
+                Content = "You have been teleported to the sofa!",
+                Image = "rbxassetid://3012312784",
+                Time = 3
+            })
+        end
+    end
+})
+
+-- **Add Warning Label (Red)**
+Tab:AddLabel("<font size='18' color='rgb(255,0,0)'>WARNING: THIS FLING AND BRING REQUIRE A SOFA</font>")
+
+-- Add a section
+local Section = Tab:AddSection({
+    Name = "<font size='18' color='rgb(255,0,0)'>For Target Player</font>"
+})
+
+-- Variables
+local targetPlayer = nil
+local orbiting = false
+local orbitConnection = nil
+local orbitRadius = 2.8  -- Orbit radius
+local spinSpeed = 90   -- Spin speed
+local yOffset = -4     -- Initial downward offset
+local movingUp = false -- Toggle for up/down movement
+local savedPosition = nil -- Variable to store player's original position
+
+-- Function to search for players
+local function searchPlayers(prefix)
+    for _, player in pairs(game:GetService("Players"):GetPlayers()) do
+        if player.Name:sub(1, #prefix):lower() == prefix:lower() then
+            return player
+        end
+    end
+    return nil
+end
+
+-- Textbox to enter player name
+Tab:AddTextbox({
+    Name = "Enter Target Player Name",
+    Default = "",
+    TextDisappear = true,
+    Callback = function(value)
+        targetPlayer = searchPlayers(value)
+        if targetPlayer then
+            OrionLib:MakeNotification({
+                Name = "Found Player!",
+                Content = "Target set to: " .. targetPlayer.Name,
+                Time = 4
+            })
+        else
+            OrionLib:MakeNotification({
+                Name = "Error",
+                Content = "Player not found!",
+                Time = 4
+            })
+        end
+    end
+})
+
+-- Orbit Toggle
+Tab:AddToggle({
+    Name = "Fling",
+    Default = false,
+    Callback = function(value)
+        if targetPlayer then
+            local player = game.Players.LocalPlayer
+            local character = player.Character or player.CharacterAdded:Wait()
+            local targetCharacter = targetPlayer.Character or targetPlayer.CharacterAdded:Wait()
+
+            if value then
+                -- Start orbiting
+                orbiting = true
+                local angle = 0  -- Reset angle
+
+                orbitConnection = game:GetService("RunService").Heartbeat:Connect(function()
+                    if orbiting and character and targetCharacter then
+                        angle = angle + spinSpeed
+                        if angle >= 360 then angle = 0 end
+
+                        -- Calculate orbit position
+                        local offset = Vector3.new(math.cos(math.rad(angle)) * orbitRadius, yOffset, math.sin(math.rad(angle)) * orbitRadius)
+                        character:SetPrimaryPartCFrame(targetCharacter.HumanoidRootPart.CFrame + offset)
+                    end
+                end)
+
+                -- Move up and down every 0.2 sec (-2, +2, -2, +2, ...)
+                task.spawn(function()
+                    while orbiting do
+                        if movingUp then
+                            yOffset = yOffset + 2  -- Move up
+                        else
+                            yOffset = yOffset - 2  -- Move down
+                        end
+                        movingUp = not movingUp  -- Toggle direction
+                        task.wait(0.2)
+                    end
+                end)
+
+            else
+                -- Stop orbiting
+                if orbitConnection then orbitConnection:Disconnect() end
+                orbiting = false
+            end
+        else
+            OrionLib:MakeNotification({
+                Name = "Error",
+                Content = "No target player selected!",
+                Time = 4
+            })
+        end
+    end
+})
+
+-- Button to bring player (Save, Orbit for 3.4s, Return)
+Tab:AddButton({
+    Name = "Bring",
+    Callback = function()
+        if targetPlayer then
+            local player = game.Players.LocalPlayer
+            local character = player.Character or player.CharacterAdded:Wait()
+            local targetCharacter = targetPlayer.Character or targetPlayer.CharacterAdded:Wait()
+
+            -- Step 1: Save position
+            savedPosition = character.PrimaryPart.CFrame
+            OrionLib:MakeNotification({
+                Name = "Step 1: Saved Position!",
+                Content = "Returning after orbiting...",
+                Time = 2
+            })
+
+            -- Step 2: Start orbiting
+            orbiting = true
+            local angle = 0  -- Reset angle
+
+            orbitConnection = game:GetService("RunService").Heartbeat:Connect(function()
+                if orbiting and character and targetCharacter then
+                    angle = angle + spinSpeed
+                    if angle >= 360 then angle = 0 end
+
+                    -- Calculate orbit position
+                    local offset = Vector3.new(math.cos(math.rad(angle)) * orbitRadius, yOffset, math.sin(math.rad(angle)) * orbitRadius)
+                    character:SetPrimaryPartCFrame(targetCharacter.HumanoidRootPart.CFrame + offset)
+                end
+            end)
+
+            -- Move up and down every 0.2 sec (-2, +2)
+            task.spawn(function()
+                while orbiting do
+                    if movingUp then
+                        yOffset = yOffset + 2  -- Move up
+                    else
+                        yOffset = yOffset - 2  -- Move down
+                    end
+                    movingUp = not movingUp  -- Toggle direction
+                    task.wait(0.2)
+                end
+            end)
+
+            -- Step 3: Wait 3.4 seconds then return
+            task.delay(1.8, function()
+                if orbitConnection then orbitConnection:Disconnect() end
+                orbiting = false
+
+                -- Return to saved position
+                if savedPosition then
+                    character:SetPrimaryPartCFrame(savedPosition)
+                    OrionLib:MakeNotification({
+                        Name = "Step 3: Returned!",
+                        Content = "You are back to your saved position!",
+                        Time = 2
+                    })
+                end
+            end)
+
+        else
+            OrionLib:MakeNotification({
+                Name = "Error",
+                Content = "No target player selected!",
+                Time = 4
+            })
+        end
+    end
+})
+local player = game.Players.LocalPlayer
+-- PlayerTab UI
+local PlayerTab = Window:MakeTab({
+    Name = "👤-Player",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+-- Add Fly Gui Label
+PlayerTab:AddLabel("<font color='rgb(255, 0, 0)'>Fly Gui By Bros IQ</font>")
+
+-- Fly Gui Button with loadstring
+PlayerTab:AddButton({
+    Name = "Fly Gui",
+    Callback = function()
+        -- Using loadstring to load the script from the given URL
+        loadstring(game:HttpGet("https://pastebin.com/raw/RuYPuhGd"))()
+    end    
+})
+
+-- Set Player Speed Label
+PlayerTab:AddLabel("<font color='rgb(255, 0, 0)'>Set Player Speed</font>")
+
+-- Speed Textbox for custom speed
+PlayerTab:AddTextbox({
+    Name = "Enter Speed",
+    Default = "16",  -- Default player speed
+    TextDisappear = true,
+    Callback = function(speed)
+        -- Set player speed (assuming 'Humanoid' is the character's humanoid object)
+        if player.Character and player.Character:FindFirstChild("Humanoid") then
+            player.Character.Humanoid.WalkSpeed = tonumber(speed)
+            OrionLib:MakeNotification({
+                Name = "Player Speed Set",
+                Content = "Player speed has been set to " .. speed,
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+        end
+    end
+})
+
+-- Auto Speed toggle
+PlayerTab:AddToggle({
+    Name = "Auto Speed 500",
+    Default = false,
+    Callback = function(state)
+        -- Automatically set player speed to 500 if toggled on
+        if state then
+            if player.Character and player.Character:FindFirstChild("Humanoid") then
+                player.Character.Humanoid.WalkSpeed = 500
+                OrionLib:MakeNotification({
+                    Name = "Auto Speed Activated",
+                    Content = "Player speed has been set to 500.",
+                    Image = "rbxassetid://4483345998",
+                    Time = 5
+                })
+            end
+        else
+            -- Reset speed to default when toggle is off
+            if player.Character and player.Character:FindFirstChild("Humanoid") then
+                player.Character.Humanoid.WalkSpeed = 16
+                OrionLib:MakeNotification({
+                    Name = "Auto Speed Deactivated",
+                    Content = "Player speed has been reset to 16.",
+                    Image = "rbxassetid://4483345998",
+                    Time = 5
+                })
+            end
+        end
+    end
+})
+
+-- Reset Speed button
+PlayerTab:AddButton({
+    Name = "Reset Speed",
+    Callback = function()
+        -- Reset player speed to default (16)
+        if player.Character and player.Character:FindFirstChild("Humanoid") then
+            player.Character.Humanoid.WalkSpeed = 16
+            OrionLib:MakeNotification({
+                Name = "Speed Reset",
+                Content = "Player speed has been reset to 16.",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+        end
+    end
+})
+
+-- Set Jump Power Label
+PlayerTab:AddLabel("<font color='rgb(255, 0, 0)'>Set Player Jump Power</font>")
+
+-- Jump Power Textbox
+PlayerTab:AddTextbox({
+    Name = "Enter Jump Power",
+    Default = "50",  -- Default jump power
+    TextDisappear = true,
+    Callback = function(jumpPower)
+        -- Set player jump power
+        if player.Character and player.Character:FindFirstChild("Humanoid") then
+            player.Character.Humanoid.JumpPower = tonumber(jumpPower)
+            OrionLib:MakeNotification({
+                Name = "Player Jump Power Set",
+                Content = "Player jump power has been set to " .. jumpPower,
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+        end
+    end
+})
+
+-- Auto Jump Power toggle
+PlayerTab:AddToggle({
+    Name = "Auto Jump Power 500",
+    Default = false,
+    Callback = function(state)
+        -- Automatically set player jump power to 500 if toggled on
+        if state then
+            if player.Character and player.Character:FindFirstChild("Humanoid") then
+                player.Character.Humanoid.JumpPower = 500
+                OrionLib:MakeNotification({
+                    Name = "Auto Jump Power Activated",
+                    Content = "Player jump power has been set to 500.",
+                    Image = "rbxassetid://4483345998",
+                    Time = 5
+                })
+            end
+        else
+            -- Reset jump power to default when toggle is off
+            if player.Character and player.Character:FindFirstChild("Humanoid") then
+                player.Character.Humanoid.JumpPower = 50
+                OrionLib:MakeNotification({
+                    Name = "Auto Jump Power Deactivated",
+                    Content = "Player jump power has been reset to 50.",
+                    Image = "rbxassetid://4483345998",
+                    Time = 5
+                })
+            end
+        end
+    end
+})
+
+-- Reset Jump Power button
+PlayerTab:AddButton({
+    Name = "Reset Jump High",
+    Callback = function()
+        -- Reset player jump power to default (50)
+        if player.Character and player.Character:FindFirstChild("Humanoid") then
+            player.Character.Humanoid.JumpPower = 50
+            OrionLib:MakeNotification({
+                Name = "Jump Power Reset",
+                Content = "Player jump power has been reset to 50.",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+        end
+    end
+})
+
+-- Set Gravity Label
+PlayerTab:AddLabel("<font color='rgb(255, 0, 0)'>Gravity</font>")
+
+-- Gravity Textbox
+PlayerTab:AddTextbox({
+    Name = "Enter Gravity",
+    Default = "196.2",  -- Default gravity value
+    TextDisappear = true,
+    Callback = function(gravity)
+        -- Set gravity in the game (assuming workspace.Gravity is the global gravity setting)
+        workspace.Gravity = tonumber(gravity)
+        OrionLib:MakeNotification({
+            Name = "Gravity Set",
+            Content = "Gravity has been set to " .. gravity,
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+    end
+})
+
+-- Reset Gravity button
+PlayerTab:AddButton({
+    Name = "Reset Gravity",
+    Callback = function()
+        -- Reset gravity to default value (196.2 is the default Roblox gravity)
+        workspace.Gravity = 196.2
+        OrionLib:MakeNotification({
+            Name = "Gravity Reset",
+            Content = "Gravity has been reset to normal.",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+    end
+})
+
+-- Initialize the UI
+OrionLib:Init()
+
+
+-- Music Tab
+local Tab = Window:MakeTab({
+    Name = "🎶-Music",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+-- Top Section: Music FE (Red, Size 18)
+Tab:AddSection({
+    Name = "<font size='18' color='rgb(255,0,0)'>Music FE</font>"
+})
+
+-- Music Variables
+local musicPlaying = nil
+local autoReplay = false
+local currentMusicID = ""
+
+-- Function to play music
+local function playMusic(musicID, message)
+    -- Stop current music if playing
+    if musicPlaying then
+        musicPlaying:Stop()
+        musicPlaying:Destroy()
+        musicPlaying = nil
+    end
+
+    -- Store the current Music ID
+    currentMusicID = musicID
+
+    -- Create a new Sound object to play the music
+    musicPlaying = Instance.new("Sound")
+    musicPlaying.SoundId = "rbxassetid://" .. musicID
+    musicPlaying.Looped = autoReplay
+    musicPlaying.Parent = game:GetService("Workspace")
+    musicPlaying:Play()
+
+    -- Notification when music starts
+    OrionLib:MakeNotification({
+        Name = "Music Playing",
+        Content = message or ("Now playing music with ID: " .. musicID),
+        Image = "rbxassetid://130446044969240",
+        Time = 5
+    })
+
+    -- Auto Replay Handling
+    musicPlaying.Ended:Connect(function()
+        if autoReplay and currentMusicID ~= "" then
+            musicPlaying:Play()
+        end
+    end)
+end
+
+-- Input box for Music ID
+Tab:AddTextbox({
+    Name = "Enter Music ID",
+    Default = "",
+    TextDisappear = true,
+    Callback = function(musicID)
+        if musicID and musicID ~= "" then
+            playMusic(musicID, "Now playing custom music!")
+        else
+            OrionLib:MakeNotification({
+                Name = "Invalid Music ID",
+                Content = "Please enter a valid Music ID.",
+                Image = "rbxassetid://130446044969240",
+                Time = 5
+            })
+        end
+    end
+})
+
+-- Auto Replay Toggle (Works for ALL sounds)
+Tab:AddToggle({
+    Name = "Auto ReMusic",
+    Default = false,
+    Callback = function(state)
+        autoReplay = state
+        if musicPlaying then
+            musicPlaying.Looped = state
+        end
+    end
+})
+
+-- Stop Music Button
+Tab:AddButton({
+    Name = "Stop Music",
+    Callback = function()
+        if musicPlaying then
+            musicPlaying:Stop()
+            musicPlaying:Destroy()
+            musicPlaying = nil
+            currentMusicID = ""
+
+            OrionLib:MakeNotification({
+                Name = "Music Stopped",
+                Content = "Music has been stopped.",
+                Image = "rbxassetid://130446044969240",
+                Time = 5
+            })
+        end
+    end
+})
+
+-- Free Sounds Section (Red, Size 18)
+Tab:AddSection({
+    Name = "<font size='18' color='rgb(255,0,0)'>Free Sounds</font>"
+})
+
+-- List of free sound IDs with names and messages
+local freeSounds = {
+    {Name = "Brazilian Sound - 2024", ID = "908730824", Message = "Enjoy this cool track!"},
+    {Name = "China Sound - TINTIN ANTI", ID = "7311729680", Message = "Now playing a classic!"},
+    {Name = "BMW Sound - RAAA", ID = "153619739", Message = "Enjoy the beats!"},
+    {Name = "Arabic Sound - Among US", ID = "7183326833", Message = "Listen to this epic tune!"},
+    {Name = "Arabic Sound - ارسال كلمت", ID = "6536444735", Message = "Playing a fan-favorite!"},
+    {Name = "Arabic Sound - سب", ID = "8701632845", Message = "This one's a banger!"},
+    {Name = "DJ Sound - Club Mix", ID = "9124780123", Message = "Now playing something special!"},
+    {Name = "DJ Sound - Party Vibes", ID = "4776398821", Message = "Feel the rhythm!"}
+}
+
+-- Buttons for free sounds
+for _, sound in pairs(freeSounds) do
+    Tab:AddButton({
+        Name = sound.Name,
+        Callback = function()
+            playMusic(sound.ID, sound.Message)
+        end
+    })
+end
+
+local Players = game:GetService("Players")
+local TeleportService = game:GetService("TeleportService")
+local HttpService = game:GetService("HttpService")
+
+-- Tab for Server Info
+local ServerTab = Window:MakeTab({
+    Name = "💾-Server",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+-- Server Info Section (Red, Size 18)
+ServerTab:AddSection({
+    Name = "<font size='18' color='rgb(255,0,0)'> Server Details </font>"
+})
+
+ServerTab:AddLabel("Player Count: " .. #Players:GetPlayers())
+ServerTab:AddLabel("Max Players: " .. Players.MaxPlayers)
+ServerTab:AddLabel("Job ID: " .. game.JobId)
+
+-- Private Server Checker
+local privateServerStatus = game.PrivateServerId ~= "" and "Private" or "Public"
+ServerTab:AddLabel("Server Type: " .. privateServerStatus)
+
+-- Game Uptime Section (Red, Size 18)
+ServerTab:AddSection({
+    Name = "<font size='18' color='rgb(255,0,0)'> Game Uptime </font>"
+})
+
+local UptimeLabel = ServerTab:AddLabel("Server Uptime: Calculating...")
+
+task.spawn(function()
+    while true do
+        local uptime = math.floor(workspace.DistributedGameTime)
+        local hours = math.floor(uptime / 3600)
+        local minutes = math.floor((uptime % 3600) / 60)
+        local seconds = math.floor(uptime % 60)
+        local formattedUptime = string.format("%02d:%02d:%02d", hours, minutes, seconds)
+
+        UptimeLabel:Set("Server Uptime: " .. formattedUptime)
+        task.wait(1)
+    end
+end)
+
+-- Your Server Time Section (Red, Size 18)
+local joinTime = tick() -- Store when YOU joined the server
+
+ServerTab:AddSection({
+    Name = "<font size='18' color='rgb(255,0,0)'> Your Server Time </font>"
+})
+
+-- Label to Show Your Time in the Server
+local YourTimeLabel = ServerTab:AddLabel("Time in Server: 00:00")
+
+-- Function to Update Time in Server
+local function updateYourTime()
+    local timeInServer = tick() - joinTime
+    local hours = math.floor(timeInServer / 3600)
+    local minutes = math.floor((timeInServer % 3600) / 60)
+    local seconds = math.floor(timeInServer % 60)
+    local timeFormatted = string.format("%02d:%02d:%02d", hours, minutes, seconds)
+    
+    YourTimeLabel:Set("Time in Server: " .. timeFormatted)
+end
+
+-- Update Time Every Second
+task.spawn(function()
+    while true do
+        updateYourTime()
+        task.wait(1) -- Update every second
+    end
+end)
+
+-- Players List Section (Red, Size 18)
+ServerTab:AddSection({
+    Name = "<font size='18' color='rgb(255,0,0)'> Players in Server </font>"
+})
+
+-- Create 22 labels for player names
+local PlayerLabels = {}
+for i = 1, 22 do
+    PlayerLabels[i] = ServerTab:AddLabel("Slot " .. i .. ": Empty")
+end
+
+-- Function to Update Player List
+local function updatePlayerList()
+    local playerList = Players:GetPlayers()
+    for i = 1, 22 do
+        if playerList[i] then
+            PlayerLabels[i]:Set("Slot " .. i .. ": " .. playerList[i].Name)
+        else
+            PlayerLabels[i]:Set("Slot " .. i .. ": Empty")
+        end
+    end
+end
+
+-- Initial update
+updatePlayerList()
+
+-- Update when a player joins or leaves
+Players.PlayerAdded:Connect(updatePlayerList)
+Players.PlayerRemoving:Connect(updatePlayerList)
+
+-- Server Controls Section (Red, Size 18)
+ServerTab:AddSection({
+    Name = "<font size='18' color='rgb(255,0,0)'> Server Controls </font>"
+})
+
+ServerTab:AddButton({
+    Name = "Rejoin Server",
+    Callback = function()
+        TeleportService:Teleport(game.PlaceId, Players.LocalPlayer)
+    end
+})
+
+ServerTab:AddButton({
+    Name = "Hop Server",
+    Callback = function()
+        local Servers = HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?sortOrder=Asc&limit=100"))
+        for _, v in ipairs(Servers.data) do
+            if v.playing < v.maxPlayers then
+                TeleportService:TeleportToPlaceInstance(game.PlaceId, v.id, Players.LocalPlayer)
+                return
+            end
+        end
+        OrionLib:MakeNotification({Name = "Server Hop", Content = "No available servers found!", Time = 3})
+    end
+})
+
+OrionLib:Init()
+-- Hubs Data Tab for Brookhaven RP
+local BrookhavenTab = Window:MakeTab({
+    Name = "👾-Script's",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+BrookhavenTab:AddSection({
+    Name = "<font size='18' color='rgb(255,0,0)'> THIS SCRIPT'S ONLY FOR BROOKHAVEN</font>"
+})
+
+local brookhavenScripts = {
+    {Name = "Y-Hub", Url = "https://raw.githubusercontent.com/Luarmor123/community-Y-HUB/refs/heads/main/YHUB%20ENGLISH"},
+    {Name = "HyzOr-Hub", Url = "https://raw.githubusercontent.com/Hyz0r-Dev404/Hyz0/refs/heads/main/Working%25Hyz0r-Hub.md"},
+    {Name = "S-Wave-Hub", Url = "https://raw.githubusercontent.com/speedwavevip/scriptspeed/refs/heads/main/Brookhaven_lraq"},
+    {Name = "RoChips-Hub", Url = "https://glot.io/snippets/gzrux646yj/raw/main.ts"},
+    {Name = "Sander-X-Hub", Url = "https://raw.githubusercontent.com/sXPiterXs1111/SanderXV2.65/main/sanderXNewV2.65.lua"},
+    {Name = "Nokie-Hub", Url = "https://raw.githubusercontent.com/Ndora1/Ndora1/main/Nokia%20Hub.lua"},
+    {Name = "Tiger-X-Hub", Url = "https://rawscripts.net/raw/Universal-Script-tiger-x-hub-21766"}
+}
+
+for _, script in ipairs(brookhavenScripts) do
+    BrookhavenTab:AddButton({
+        Name = script.Name,
+        Callback = function()
+            loadstring(game:HttpGet(script.Url))()
+            OrionLib:MakeNotification({
+                Name = "Loaded",
+                Content = script.Name .. " has been executed!",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+        end
+    })
+end
+
+-- **New Button for R4D TROLL NO KEY**
+BrookhavenTab:AddButton({
+    Name = "R4D TROLL NO KEY",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-R4D-TROLL-NO-KEY-17625"))()
+        OrionLib:MakeNotification({
+            Name = "Loaded",
+            Content = "R4D TROLL NO KEY has been executed!",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })
+    end
+})
+
+local Tab = Window:MakeTab({
+    Name = "👾-FE Scripts",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+-- Server Hack Section (Added at the top)
+Tab:AddSection({
+    Name = "<font size='18' color='rgb(255,0,0)'> Server Hack </font>"
+})
+
+Tab:AddButton({
+    Name = "Fire Server",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fire-the-server-26489"))()
+    end
+})
+
+-- FE Scripts Section
+Tab:AddSection({
+    Name = "<font size='18' color='rgb(255,0,0)'> FE Scripts </font>"
+})
+
+Tab:AddButton({
+    Name = "R6",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/QiLP8EeM"))()
+    end
+})
+
+Tab:AddButton({
+    Name = "FE Bypass",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fe-bypass-script-GUI-fixed-28197"))()
+    end
+})
+
+-- Hacking Server Script Section
+Tab:AddSection({
+    Name = "<font size='18' color='rgb(255,0,0)'> Hacking Server Script </font>"
+})
+
+Tab:AddButton({
+    Name = "imnotexplot4",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-imnotexploi4-Destroyer-GUI-27653"))()
+    end
+})
+
+-- Btools Section
+Tab:AddSection({
+    Name = "<font size='18' color='rgb(255,0,0)'> Btools </font>"
+})
+
+Tab:AddButton({
+    Name = "Btools",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/3CTqFgsE"))()
+    end
+})
+
+OrionLib:Init()
+-- Create Admin Scripts Tab
+local AdminTab = Window:MakeTab({
+    Name = "👾-Admin Scripts",
+    Icon = "rbxassetid://4483345998", -- Replace with your preferred icon ID
+    PremiumOnly = false
+})
+
+-- Add Red Header Label for Admin Scripts
+AdminTab:AddLabel("<font color='rgb(255, 0, 0)'>Admin Scripts</font>")
+
+-- Add Buttons for Each Script
+AdminTab:AddButton({
+    Name = "Kohl's Admin Infinite",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    end
+})
+
+AdminTab:AddButton({
+    Name = "Adonis Admin",
+    Callback = function()
+        loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/Sceleratis/Adonis/main/loader/loader.lua'))()
+    end
+})
+
+AdminTab:AddButton({
+    Name = "Fates Admin",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua'))()
+    end
+})
+
+AdminTab:AddButton({
+    Name = "Basic Admin Essentials",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/CloudX-Scripts/RobloxScripts/main/BasicAdmin.lua'))()
+    end
+})
+
+AdminTab:AddButton({
+    Name = "CMD-X",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source'))()
+    end
+})
+
+AdminTab:AddButton({
+    Name = "Infinite Yield",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    end
+})
+
+-- Initialize the UI
+OrionLib:Init()
+
+-- Create the "Anti" tab
+local AntiTab = Window:MakeTab({
+    Name = "🚫-Anti",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+-- Add sections for clarity
+AntiTab:AddSection({
+    Name = "<font size='18' color='rgb(255,0,0)'> ANTI Bang</font>"
+})
+AntiTab:AddSection({
+    Name = "<font size='15' color='rgb(255,0,0)'> Use this toggle if someone is banging you</font>"
+})
+
+-- Separate variables for each feature
+local teleportingBang = false
+local teleportingFling = false
+
+-- Function for ANTI Bang
+function teleportLoopBang()
+    while teleportingBang do
+        local player = game.Players.LocalPlayer
+        if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+            local hrp = player.Character.HumanoidRootPart
+            hrp.CFrame = CFrame.new(0, 200, 3460)
+            task.wait(0.1)
+            hrp.CFrame = CFrame.new(3460, 200, 0)
+            task.wait(0.1)
+            hrp.CFrame = CFrame.new(2000, 200, 0)
+            task.wait(0.1)
+            hrp.CFrame = CFrame.new(0, 200, 2000)
+            task.wait(0.1)
+        end
+    end
+end
+
+-- Toggle for ANTI Bang
+AntiTab:AddToggle({
+    Name = "Enable ANTI Bang",
+    Default = false,
+    Callback = function(Value)
+        teleportingBang = Value
+        if teleportingBang then
+            task.spawn(teleportLoopBang)
+        end
+    end
+})
+
+-- Add section for ANTI Fling
+AntiTab:AddSection({
+    Name = "<font size='18' color='rgb(255,0,0)'> ANTI Fling</font>"
+})
+AntiTab:AddSection({
+    Name = "<font size='15' color='rgb(255,0,0)'> Use this toggle if someone is flinging you</font>"
+})
+
+-- Function for ANTI Fling
+function teleportLoopFling()
+    while teleportingFling do
+        local player = game.Players.LocalPlayer
+        if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+            local hrp = player.Character.HumanoidRootPart
+            hrp.CFrame = CFrame.new(-21.5, 2, 47)
+            task.wait(0.1)
+            hrp.CFrame = CFrame.new(-26, 2, 42)
+            task.wait(0.1)
+            hrp.CFrame = CFrame.new(-26, 2, 50)
+            task.wait(0.1)
+        end
+    end
+end
+
+-- Toggle for ANTI Fling
+AntiTab:AddToggle({
+    Name = "Enable ANTI Fling",
+    Default = false,
+    Callback = function(Value)
+        teleportingFling = Value
+        if teleportingFling then
+            task.spawn(teleportLoopFling)
+        end
+    end
+})
+
+OrionLib:Init()
+local MiscTab = Window:MakeTab({
+    Name = "🏆-Creator",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+-- Add section with creator info
+MiscTab:AddSection({
+    Name = "<font size='18' color='rgb(255,0,0)'> CREATOR : XPROXGAMERXPROXZ (BROS IQ)</font>"
+})
+
+-- Define the notifications with links
+local notifications = {
+    {Name = "Instagram chat", Clipboard = "https://www.instagram.com/idc.beyloni.gg?igsh=NWlpZ3JnNnV1dWh0"},
+    {Name = "URL For Executor's", Clipboard = "https://sites.google.com/view/2-rtx-editgaming/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9-%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9"},
+    {Name = "Telegram Group", Clipboard = "https://t.me/+GB4XQDv_hj4yNTJk"}
+}
+
+-- Loop through the notifications and create buttons
+for _, item in ipairs(notifications) do
+    MiscTab:AddButton({
+        Name = item.Name,
+        Callback = function()
+            setclipboard(item.Clipboard)
+            OrionLib:MakeNotification({
+                Name = "🔥‼️Link Copied‼️🔥",
+                Content = "The link has been copied to your clipboard.",
+                Image = "rbxassetid://4483345998",
+                Time = 8
+            })
+        end
+    })
+end
