@@ -15,11 +15,11 @@ local function updateRolePlayBio(bioMessage)
 end
 
 -- Set the bio to "👾 Welcome To Bros IQ Hub 😈" for 5 seconds
-updateRolePlayBio("👾 Welcome To Bros IQ Hub 😈")
+updateRolePlayBio("Creator : XPROXGAMERXPROXZ")
 wait(5)
 
 -- Set the bio back to the original message
-updateRolePlayBio("Bros IQ Hub | Sema ❤️")
+updateRolePlayBio("👾 Welcome To Bros IQ Hub 😈")
 
 
 OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/WRUyYTdY')))()
