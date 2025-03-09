@@ -197,7 +197,7 @@ end
 
 
 local Tab = Window:MakeTab({
-    Name = "Accessories",
+    Name = "🗿-Accessories",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
