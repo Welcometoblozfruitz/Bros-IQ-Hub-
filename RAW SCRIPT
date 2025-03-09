@@ -1,3 +1,27 @@
+-- Function to handle sending updates to the server
+local function updateRolePlayBio(bioMessage)
+    local args = {
+        [1] = "RolePlayBio",
+        [2] = bioMessage
+    }
+    local repStorage = game:GetService("ReplicatedStorage")
+    local remoteEvent = repStorage.RE:FindFirstChild("1RPNam1eTex1t")
+
+    if remoteEvent then
+        remoteEvent:FireServer(unpack(args))
+    else
+        warn("RemoteEvent not found.")
+    end
+end
+
+-- Set the bio to "👾 Welcome To Bros IQ Hub 😈" for 5 seconds
+updateRolePlayBio("👾 Welcome To Bros IQ Hub 😈")
+wait(5)
+
+-- Set the bio back to the original message
+updateRolePlayBio("Bros IQ Hub | Sema ❤️")
+
+
 OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/WRUyYTdY')))()
 
 local Window = OrionLib:MakeWindow({
@@ -169,6 +193,87 @@ for _, bundle in ipairs(bundles) do
         end
     })
 end
+
+
+
+local Tab = Window:MakeTab({
+    Name = "Accessories",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+Tab:AddSection({
+    Name = "<font size='18' color='rgb(255,0,0)'> Accessories </font>"
+})
+
+-- Function to equip accessories
+local function Wear(id)
+    game:GetService("ReplicatedStorage").RE:FindFirstChild("1Updat1eAvata1r"):FireServer("wear", id)
+end
+
+-- Sound Accessories
+local SoundAccessories = {
+    {Name = "Witches Brew Hat", ID = 305888394},
+    {Name = "Transient-Harmonica", ID = 33070696},
+    {Name = "Chicken-Suit", ID = 24112667},
+    {Name = "Bloxy-Cola", ID = 24114402},
+}
+
+for _, accessory in pairs(SoundAccessories) do
+    Tab:AddButton({
+        Name = accessory.Name,
+        Callback = function()
+            Wear(accessory.ID)
+        end
+    })
+end
+
+-- Hand Accessories
+local HandAccessories = {
+    {Name = "Ambris-Lum-Sword", ID = 5722175994},
+    {Name = "Atlantean-Trident", ID = 3241238974},
+    {Name = "Barbarian-Battleaxe", ID = 3131064293},
+    {Name = "Tide-Shovel", ID = 3381195240},
+    {Name = "Spray-Can", ID = 2936950534},
+    {Name = "Thickhoof-Axe", ID = 3240543366},
+    {Name = "Bread-Sword", ID = 3052700547},
+    {Name = "Terrible-Teddy", ID = 3339372724},
+    {Name = "Frozen-Blaster", ID = 3013849063},
+    {Name = "Infinity-Gauntlet", ID = 2988781799},
+}
+
+for _, accessory in pairs(HandAccessories) do
+    Tab:AddButton({
+        Name = accessory.Name,
+        Callback = function()
+            Wear(accessory.ID)
+        end
+    })
+end
+
+-- Particle Accessories
+local ParticleAccessories = {
+    {Name = "Doomsekkar", ID = 132809431},
+    {Name = "Ghosdeeri", ID = 183468963},
+    {Name = "Dusekkar", ID = 1474657},
+    {Name = "Hiccup's Viking Helmet", ID = 262669756},
+    {Name = "Korblox Grand Marshal", ID = 233253311},
+    {Name = "Flaming Mohawk", ID = 191101707},
+    {Name = "Fiery Horns of the Netherworld", ID = 215718515},
+    {Name = "Bluesteel Horns of Pwnage", ID = 233705354},
+}
+
+for _, accessory in pairs(ParticleAccessories) do
+    Tab:AddButton({
+        Name = accessory.Name,
+        Callback = function()
+            Wear(accessory.ID)
+        end
+    })
+end
+
+OrionLib:Init()
+
 
 OrionLib:Init()
 local localPlayer = game.Players.LocalPlayer
