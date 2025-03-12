@@ -1,3 +1,10 @@
+local VirtualInputManager = game:GetService("VirtualInputManager")
+
+function sendMessage(msg)
+    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(msg)
+end
+
+sendMessage("👾😈 Wellcome To Bros IQ Hub | Creator xproxgamerxproxz 😈👾") -- Change this to your desired message
 
 OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/WRUyYTdY')))()
 
