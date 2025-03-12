@@ -1,24 +1,20 @@
 -- Function to handle sending updates to the server
 local function updateRolePlayBio(bioMessage)
-    local args = {
-        [1] = "RolePlayBio",
-        [2] = bioMessage
-    }
     local repStorage = game:GetService("ReplicatedStorage")
-    local remoteEvent = repStorage.RE:FindFirstChild("1RPNam1eTex1t")
+    local remoteEvent = repStorage:FindFirstChild("RE"):FindFirstChild("1RPNam1eTex1t")
 
     if remoteEvent then
-        remoteEvent:FireServer(unpack(args))
+        remoteEvent:FireServer("RolePlayBio", bioMessage)
     else
-        warn("RemoteEvent not found.")
+        warn("RemoteEvent '1RPNam1eTex1t' not found in ReplicatedStorage.")
     end
 end
 
--- Set the bio to "👾 Welcome To Bros IQ Hub 😈" for 5 seconds
+-- Set the bio to "Creator : XPROXGAMERXPROXZ" for 5 seconds
 updateRolePlayBio("Creator : XPROXGAMERXPROXZ")
-wait(5)
+task.wait(5)
 
--- Set the bio back to the original message
+-- Change bio to "Welcome To Bros IQ Hub"
 updateRolePlayBio("👾 Welcome To Bros IQ Hub 😈")
 
 
