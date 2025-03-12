@@ -1,22 +1,3 @@
--- Function to handle sending updates to the server
-local function updateRolePlayBio(bioMessage)
-    local repStorage = game:GetService("ReplicatedStorage")
-    local remoteEvent = repStorage:FindFirstChild("RE"):FindFirstChild("1RPNam1eTex1t")
-
-    if remoteEvent then
-        remoteEvent:FireServer("RolePlayBio", bioMessage)
-    else
-        warn("RemoteEvent '1RPNam1eTex1t' not found in ReplicatedStorage.")
-    end
-end
-
--- Set the bio to "Creator : XPROXGAMERXPROXZ" for 5 seconds
-updateRolePlayBio("Creator : XPROXGAMERXPROXZ")
-task.wait(5)
-
--- Change bio to "Welcome To Bros IQ Hub"
-updateRolePlayBio("👾 Welcome To Bros IQ Hub 😈")
-
 
 OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/WRUyYTdY')))()
 
